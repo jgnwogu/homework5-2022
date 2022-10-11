@@ -1,0 +1,212 @@
+/*Animate the logo with keyframes.  (Here is a keyframes reference.) 
+It should start at a width of 25px and grow to 475px.  
+It should also start with an opacity of 0 and end with an opacity of 1.
+ The animation should take 5 seconds and only happen when the page is loaded. 
+ **You can complete this step later in the process 
+ - it won’t affect the larger views. 
+*/
+
+#logo{
+    opacity: 0;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: logo_animation;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes logo_animation {
+    from {
+      width: 25px;
+      opacity: 0;
+    }
+  
+
+    to{
+        width: 475px;
+        opacity: 1;
+    }
+  }
+  
+  body{
+    font-family: Poppins, serif;
+    background: #f1f1f1 url('../images/concrete_seamless.png');
+  }
+
+  header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+  
+
+  .nav_links{
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+
+  .nav_items a:visited{
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .card > header{
+    background: #288088;
+    border: solid 2px #45ADAD;
+    padding: 20px 0;
+    border-radius: 50px 50px 0 0;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: 450px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    justify-content: center;
+    border-radius: 100px 100px 0 0;
+  }
+
+  .card ul li:first-of-type{
+    text-align: center;
+  }
+
+  .pricing{
+    display: flex;
+    flex-basis: 450px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 0;
+  }
+
+  /* Style the images in the gallery class.  
+  These elements will have a solid 10px border with a color of #50C7C7, 
+  10px margin on all four sides and a width of 300px. */
+
+.gallery img{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+}
+
+
+@media only screen and (min-width: 900px) {
+    
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo{
+        width: auto;
+        margin: 0px;
+    }
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card{
+        display: flex; 
+        flex-basis: 275px;
+        height: min-content;
+    }
+
+    .pricing{
+        display: flex;
+        align-items: center;
+    }
+    
+    .skip + header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    body{
+        margin-top: 100px;
+    }
+}
+
+/* no animation for accessibility*/
+
+@media (prefers-reduced-motion: reduce) {
+    #logo{
+    animation: none;
+    opacity: 1;
+    width: 475px;
+    }
+}
+
+/* PORTRAIT */
+@media print{
+
+    @media (orientation: portrait) {
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: none;
+    }
+
+    #logo{
+        width: 475px;
+    }
+    nav{
+        width: 100%;
+    }
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .card ul li:first-of-type{
+        text-align: left;
+      }
+  
+    .pricing{
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        flex-wrap: nowrap;
+    }
+
+    .card{
+        height: min-content;
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+        border-radius: 50px 50px 0 0;
+    }
+
+    .gallery{
+        display: none;
+    }
+
+    #gallery{
+        display: none;
+    }
+
+    .card ul li:nth-child(2)::after{
+        content: "\1F44D";
+    }
+}
+}
