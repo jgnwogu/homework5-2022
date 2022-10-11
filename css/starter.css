@@ -25,7 +25,7 @@ body{
   p {
     padding: 0 30px;
   }
-  
+  /* skip content behavior  */ 
   a.skip{
     background: white;
     left: 0;
@@ -47,7 +47,7 @@ body{
     border: 2px solid black;
   }
 
-
+  /* setting behavior for the navigation links  */
   .nav_item a{
     padding: 10px;
     color: #0000EE;
