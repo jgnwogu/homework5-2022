@@ -50,11 +50,11 @@ body{
 
   .nav_item a{
     padding: 10px;
-    color:inherit;
+    color: #0000EE;
   }
   
   .nav_item a:visited{
-    color: inherit;
+    color: #0000EE;
     text-decoration: underline;
   }
 
