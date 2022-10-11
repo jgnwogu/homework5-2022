@@ -53,10 +53,6 @@ It should also start with an opacity of 0 and end with an opacity of 1.
     flex-grow: 1;
   }
 
-  .nav_items a:visited{
-    color: inherit;
-    text-decoration: underline;
-  }
 
   .card > header{
     background: #288088;
