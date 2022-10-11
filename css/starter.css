@@ -50,6 +50,7 @@ body{
 
   .nav_item a{
     padding: 10px;
+    color:inherit;
   }
   
   .nav_items a:visited{
