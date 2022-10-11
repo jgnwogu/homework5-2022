@@ -53,7 +53,7 @@ body{
     color:inherit;
   }
   
-  .nav_items a:visited{
+  .nav_item a:visited{
     color: inherit;
     text-decoration: underline;
   }
